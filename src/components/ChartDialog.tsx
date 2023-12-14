@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
 import React from "react";
+import SampleChart from "./SampleChart";
 
 type Props = {
   open: boolean;
@@ -44,7 +45,7 @@ const ChartDialog = ({ open, handleClose }: Props) => {
         }}
       >
         <Typography variant="h6" component="div">
-          نمودار تست
+          نمودار درآمد و هزینه
         </Typography>
         <IconButton
           edge="start"
@@ -65,10 +66,10 @@ const ChartDialog = ({ open, handleClose }: Props) => {
           height: "calc(100% - 70px)",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "center",
         }}
       >
-        <Box sx={{ width: "60%" }}></Box>
+        <SampleChart />
       </DialogContent>
     </Dialog>
   );
